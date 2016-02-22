@@ -34,6 +34,12 @@ var treemap = (function() {
             .depth(1)
             .size(_size)
             .labels({"align": "left", "valign": "top"})
+            .ui([
+                {
+                    "method" : "size",
+                    "value"  : [ "export_val" , "import_val" ]
+                }
+            ])
             .draw();
     }
 
