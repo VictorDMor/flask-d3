@@ -41,6 +41,11 @@ var treemap = (function() {
         _name = "tree_map";
         _id = "hs_id";
         _size = "export_val";
+
+        $('#size-selector').on('change', function(){
+            _size = this.value;
+            draw();
+        });
     }
 
 })();
