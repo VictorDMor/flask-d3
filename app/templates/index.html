@@ -25,6 +25,7 @@ form {
 }
 
 </style>
+
 <form>
   <label><input type="radio" name="mode" value="size" checked> Size</label>
   <label><input type="radio" name="mode" value="count"> Count</label>
@@ -38,7 +39,7 @@ var margin = {top: 40, right: 10, bottom: 10, left: 10},
 
 var color = d3.scale.category20c();
 
-var treemap = d3.layout.treemap()
+var treemap = d3.layout.tree()
     .size([width, height])
     .sticky(true)
     .value(function(d) { return d.size; });
@@ -54,12 +55,12 @@ var div = d3.select("body").append("div")
    if (error) throw error;
 
   var node = div.datum(root).selectAll(".node")
-      .data(treemap.nodes)
+    .data(treemap.nodes)
     .enter().append("div")
-      .attr("class", "node")
-      .call(position)
-      .style("background", function(d) { return d.children ? color(d.name) : null; })
-      .text(function(d) { return d.children ? null : d.name; });
+    .attr("class", "node")
+    .call(position)
+    .style("background", function(d) { return d.children ? color(d.name) : null; })
+    .text(function(d) { return d.children ? null : d.name; });
 
   d3.selectAll("input").on("change", function change() {
     var value = this.value === "count"
