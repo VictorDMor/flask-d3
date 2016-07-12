@@ -1,29 +1,24 @@
 <!DOCTYPE html>
+<html>
 <meta charset="utf-8">
-<style>
+<head>
+    <title></title>
 
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: auto;
-  position: relative;
-  width: 960px;
-}
+    <script src="http://www.d3plus.org/js/d3.js"></script>
+    <script src="http://www.d3plus.org/js/d3plus.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="../static/js/treemap.js"></script>
 
-form {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="../static/css/treemap.css"/>
 
-.node {
-  border: solid 1px white;
-  font: 10px sans-serif;
-  line-height: 12px;
-  overflow: hidden;
-  position: absolute;
-  text-indent: 2px;
-}
+</head>
+<body>
+    <div class="page-header">
+      <h1>Trade Partner</h1>
+    </div>
 
+<<<<<<< HEAD
 </style>
 
 <form>
@@ -32,11 +27,13 @@ form {
 </form>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
+=======
+    <h4>Minas Gerais</h4>
+>>>>>>> da4c05f111ea86a66672d80dfccbc1cce27b289c
 
-var margin = {top: 40, right: 10, bottom: 10, left: 10},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    <div id="viz"></div>
 
+<<<<<<< HEAD
 var color = d3.scale.category20c();
 
 var treemap = d3.layout.tree()
@@ -83,3 +80,11 @@ function position() {
 }
 
 </script>
+=======
+    <select id="size-selector">
+        <option value="export_val" selected="true">Export value</option>
+        <option value="import_val">Import value</option>
+    </select>
+</body>
+</html>
+>>>>>>> da4c05f111ea86a66672d80dfccbc1cce27b289c
